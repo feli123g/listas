@@ -76,6 +76,22 @@ class doubleList:
                     apuntador.anterior.siguiente = nuevo_nodo
                 apuntador.anterior = nuevo_nodo
 
+    def buscar_elemento(self, x):
+        if self.root is None:
+            print("La lista está vacía")
+            return
+        apuntador = self.root
+        encontrado = False
+        while apuntador is not None:
+            if apuntador.item == x:
+                encontrado = True
+                break
+            apuntador = apuntador.siguiente
+        if encontrado:
+            print(f"El elemento {x} se encuentra en la lista.")
+        else:
+            print(f"El elemento {x} no se encuentra en la lista.")
+
     def navegar_lista(self):
         if self.root is None:
             print("La lista esta vacia")
@@ -187,16 +203,16 @@ while opcion != 0:
         while opc_list != 5:
             if opc_list == 1:
                 if nueva_listd.root is None:
-                    valor_in = int(input("Ingresa un valor"))
+                    valor_in = int(input("Ingresa un valor: "))
                     nueva_listd.insertar_lista_vacia(valor_in)
                 else:
                     print(MSG_LIST_DOUBLE)
                     opc_in_list = int(input("Ingres la opcion: "))
                     if opc_in_list == 1:
-                        valor_in = int(input("Ingresa un valor"))
+                        valor_in = int(input("Ingresa un valor: "))
                         nueva_listd.insertar_inicio(valor_in)
                     elif opc_in_list == 2:
-                        valor_in = int(input("Ingresa un valor"))
+                        valor_in = int(input("Ingresa un valor: "))
                         nueva_listd.insetar_final(valor_in)
                     elif opc_in_list == 3:
                         valor_desp = int(
@@ -211,7 +227,8 @@ while opcion != 0:
                         nueva_listd.insertar_antes_elemento(
                             valor_antes, valor_in)
             elif opc_list == 2:
-                print("En Lista Doblemente Ligada opc2")
+                valor_buscar = int(input("Ingresa el elemento a buscar: "))
+                nueva_listd.buscar_elemento(valor_buscar)
             elif opc_list == 3:
                 print(MSG_LIST_DOUBLE_DEL)
                 opc_del_list = int(input("Ingres la opcion: "))
