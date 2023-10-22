@@ -198,6 +198,7 @@ while opcion != 0:
                     print(f"El número {buscar1} está en la lista." )
                 else:
                     print(f"El número {buscar1} no está en la lista.")
+                    print("jesus puto XD")
                     
             elif opc_list == 3:
                 while True:
