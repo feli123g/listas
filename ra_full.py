@@ -167,9 +167,14 @@ while opcion != 0:
         print("Has elegido la opción 1. Listas Simple".center(60, ":"))
         print(MSG_LIST)
         opc_list = int(input("Ingresa la opción: "))
+        lista=[]#LISTA PARA INSERCION NO BORRAR
         while opc_list != 5:
             if opc_list == 1:
                 print("En lista simple opc1")
+                Dato = input("Ingrese el dato a insertar: ")
+                lista = lista+[Dato]
+                print("\nDato '{}' insertado en la lista.".format(Dato))
+                print(lista)
             elif opc_list == 2:
                 print("En lista simple opc2")
             elif opc_list == 3:
