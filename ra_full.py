@@ -162,6 +162,7 @@ MSG_LIST = """
 3. Eliminación
 4. Consultar
 5. Regresar al menú principal.
+¿Qué opción desea?
 """
 MSG_LIST_DOUBLE = """
 1. insertar al inicio
@@ -183,7 +184,7 @@ while opcion != 0:
         print("Has elegido la opción 1. Listas Simple".center(60, ":"))
         print(MSG_LIST)
         opc_list = int(input("Ingresa la opción: "))
-        lista=[]#LISTA PARA INSERCION NO BORRAR
+        lista = []  # LISTA PARA INSERCION NO BORRAR
         while opc_list != 5:
             if opc_list == 1:
                 print("En lista simple opc1")
