@@ -184,13 +184,11 @@ while opcion != 0:
         print("Has elegido la opción 1. Listas Simple".center(60, ":"))
         print(MSG_LIST)
         opc_list = int(input("Ingresa la opción: "))
-        lista1=[]#LISTA PARA INSERCION NO BORRAR
+        lista1 = []  # LISTA PARA INSERCION NO BORRAR
         while opc_list != 5:
             if opc_list == 1:
-                print("En lista simple opc1\n")
-                dat1=int(input("Ingrese un dato entero a la lista: "))
+                dat1 = int(input("Ingrese un dato entero a la lista: "))
                 lista1.append(dat1)
-                print(lista1,"\n")
                 print("\nDato '{}' insertado en la lista.".format(dat1))
             elif opc_list == 2:
                 print("En lista simple opc2")
@@ -198,18 +196,15 @@ while opcion != 0:
                 while True:
                     print("Eliminar un dato (A)")
                     print("Eliminar el ultimo dato (B)")
-                    op = input("Eliga una opcion: ""\n")
-                    if op == "A" or op == "a":
-                        bdt = int(input("Que dato desea eliminar de la lista: "))
-                        print(lista1)
-                        print(f"Dato {bdt} eliminado de la lista""\n")
+                    op = input("Eliga una opcion: \n")
+                    if op.lower() == "a":
+                        bdt = int(
+                            input("Que dato desea eliminar de la lista: "))
+                        print(f"Dato {bdt} eliminado de la lista \n")
                         lista1.remove(bdt)
-                        print(lista1, "\n")
                         break
-                    elif op == "B" or op == "b":
-                        print(lista1, "\n")
+                    elif op.lower() == "b":
                         lista1.pop()
-                        print(lista1, "\n")
                         break
                     else:
                         print("Solo puede ingresar (A/B)")
