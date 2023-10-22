@@ -192,6 +192,12 @@ while opcion != 0:
                 print("\nDato '{}' insertado en la lista.".format(dat1))
             elif opc_list == 2:
                 print("En lista simple opc2")
+                buscar1=int(input("Ingresa un número entero que desees buscar:"))
+                BUS=(buscar1 in lista1)
+                if BUS == True:
+                    print(f"El número {buscar1} está en la lista." )
+                else:
+                    print(f"El número {buscar1} no está en la lista.")
             elif opc_list == 3:
                 while True:
                     print("Eliminar un dato (A)")
